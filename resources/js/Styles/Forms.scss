@@ -1,0 +1,133 @@
+@import '@/GlobalVariables.scss';
+.input-container {
+    width: 100%;
+    max-width: 400px;
+    label {
+        color: $neutral-color-7;
+        font-size: 0.875rem;
+
+        font-size: 0.625rem;
+        font-weight: $weight-400;
+    }
+    .required {
+        font-style: italic;
+    }
+    .field-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-top: 4.96px;
+        .show-icon-container {
+            position: absolute;
+            right: 0;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 32px;
+            .show-password-icon {
+                flex-shrink: 0;
+                width: 18px;
+                height: 11px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .hide-password-icon {
+                flex-shrink: 0;
+                width: 23px;
+                height: 14px;
+                cursor: pointer;
+                user-select: none;
+            }
+            .icon {
+                flex-shrink: 0;
+                width: 17px;
+                height: 15px;
+            }
+        }
+    }
+    .error-input {
+        box-shadow: 0 0 12px 1px $danger-color;
+        border: 1px solid $danger-color !important;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .input-container {
+        max-width: unset !important;
+    }
+}
+
+:deep(.dp__input_icon) {
+    left: unset !important;
+    right: 0;
+    padding: 6px 10px !important;
+}
+
+:deep(.dp__input) {
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    color: $text-light-bg !important;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px 0px 8px !important;
+    border: 1px solid #adadad !important;
+    height: 32px !important;
+}
+
+:deep(.dp__clear_icon) {
+    right: 20px !important;
+}
+
+:deep(select),
+:deep(textarea),
+input,
+.input-field {
+    width: 100%;
+    height: 32px;
+    padding-left: 8px;
+    color: $text-light-bg;
+    font-weight: $weight-400;
+    border: 1px solid $neutral-color-3;
+
+    outline: none;
+
+    font-size: 0.625rem;
+font-weight: 400;
+    span {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: $neutral-color-5;
+        font-size: 0.875rem;
+        font-weight: $weight-500;
+    }
+}
+
+:deep(.dp__main) {
+    width: 100%;
+    font-family: $general-font !important;
+}
+
+textarea {
+    height: 120px;
+}
+
+input:focus,
+:deep(.dp__input_focus) {
+    box-shadow: 0 0 4px 0 $secondary-color;
+    border: 1px solid $secondary-color !important;
+}
+
+.error-custom-input {
+     :deep(.dp__input),
+     :deep(select),
+     :deep(textarea),
+     :deep(.input) {
+        box-shadow: 0 0 12px 1px $danger-color;
+        border: 1px solid $danger-color !important;
+    }
+}
+

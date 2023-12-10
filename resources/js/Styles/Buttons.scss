@@ -1,0 +1,77 @@
+@import '@/GlobalVariables.scss';
+
+button{
+    padding: 6px 20px;
+    color: $text-light-bg;
+    font-size: 1rem;
+    font-weight: $weight-500;
+    text-align: center;
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
+    border-radius: 50px;
+    outline: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+button:hover:not(.disabled-button) {
+    background: $secondary-color-darker;
+    border: 1px solid $secondary-color-darker;
+}
+
+.secondary-button {
+    color: $text-dark-bg;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+}
+
+.secondary-button:hover:not(.disabled-button) {
+    background: $primary-color-darker;
+    border: 1px solid $primary-color-darker;
+}
+
+.secondary-outline {
+    color: $secondary-color;
+    background: transparent;
+    border: 1px solid $secondary-color;
+}
+
+.secondary-outline:hover:not(.disabled-button) {
+    color: $text-light-bg;
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
+}
+.tertiary-button {
+    color: $primary-color;
+    background: transparent;
+    border: 1px solid $primary-color;
+}
+
+.tertiary-button:hover:not(.disabled-button) {
+    color: $text-dark-bg;
+    background: $primary-color;
+    border: 1px solid $primary-color;
+}
+.tertiary-button-bg-dark {
+    color: $text-dark-bg;
+    background: transparent;
+    border: 1px solid $neutral-color-0;
+}
+
+.tertiary-button-bg-dark:hover:not(.disabled-button) {
+    color: $text-light-bg;
+    background: $neutral-color-0;
+    border: 1px solid $neutral-color-0;
+}
+.icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+    img,
+    svg {
+        width: 15px;
+        height: 15px;
+    }
+}

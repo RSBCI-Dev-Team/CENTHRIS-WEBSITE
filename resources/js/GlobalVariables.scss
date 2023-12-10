@@ -1,0 +1,85 @@
+
+
+
+ /* Global Variables */
+
+/* General */
+
+$primary-color: #564d65;
+$primary-color-light: #ab96c1;
+$primary-color-lighter: #cdc0da;
+$primary-color-lightest: #eae8ec;
+$primary-color-darker: #2b233a;
+$primary-color-light-2: #6c5d84;
+$primary-color-light-3: #978EA6;
+$secondary-color: #ffb800;
+$secondary-color-darker: #dfa203;
+$secondary-color-darkest: #a67800;
+$secondary-color-pale: #e9d7a8;
+$secondary-color-lighter: #f4e6c3;
+$secondary-color-lightest: #fcf9f2;
+$secondary-color-lightest-1: #fff8e5;
+$danger-color: #d05337;
+$danger-color-darker: #94311b;
+$danger-color-lighter: #e2c6c0;
+$danger-color-bright: #FF2D00;
+$neutral-color-0: #fff;
+$neutral-color-1: #f1f1f1;
+$neutral-color-2: #e7e7e7;
+$neutral-color-3: #adadad;
+$neutral-color-4: #8b8b8b;
+$neutral-color-5: #717171;
+$neutral-color-6: #2e2d2b;
+$neutral-color-7: #545454;
+$neutral-color-9: #fdfdfd;
+
+/* Mode Indications */
+
+$admin-mode-indicator-bg: #e9d7a8;
+$admin-mode-indicator-outline: #2a0e44;
+$other-mode-indicator-outline: #ffb800;
+
+/* TEXT */
+
+$text-input-placeholder: #adadad;
+$text-input-label: #2e2d2b;
+$text-dark-bg: #fff;
+$text-light-bg: #2e2d2b;
+$text-heading: #564d65;
+$text-subheading-1a: #564d65;
+$text-subheading-1b: #a67800;
+$text-subheading-2: #a67800;
+$text-subheading-b: #A67800;
+
+/* STATUS */
+
+$approved-status-bg: #ffd976;
+$pending-status-bg: #717171;
+$absent-status-bg: #ff7b5d;
+$draft-status-bg: #81a8bd;
+
+/* KANBAN HEADER */
+
+$board-doing-color: #05344d;
+$board-doing-bg: #81a8bd;
+$board-done-color: #794900;
+$board-done-bg: #ffd976;
+$to-do-color: #2a0e44;
+$board-to-do-bg: #cdc0da;
+$text-input-label: #2E2D2B;
+
+/* Font Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+$general-font: 'Montserrat', sans-serif;
+$poppins-font:'Poppins', sans-serif;
+$ptSans-font:'PT Sans Narrow', sans-serif;
+
+$weight-300: 300;
+$weight-400: 400;
+$weight-500: 500;
+$weight-600: 600;
+$weight-700: 700;
+$weight-800: 800;
