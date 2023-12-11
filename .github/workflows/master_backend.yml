@@ -1,6 +1,6 @@
 on:
   push:
-    branches: master
+    branches: main
 name: 🚀 Deploy centhris master backend on push
 jobs:
   web-deploy:
