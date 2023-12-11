@@ -24,8 +24,8 @@ jobs:
           server: ftp.rsbcidevteam.tech
           username: john.nubla@rsbcidevteam.tech
           password: password123456password123456
-          server-dir: /centhris.rsbcidevteam.tech/js/
-          local-dir: ./public/js/
+          server-dir: /centhris.rsbcidevteam.tech/build/
+          local-dir: ./public/build/
       - name: 📂 Sync files 2
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
