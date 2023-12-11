@@ -4,7 +4,7 @@
             <div class="background-container">
                 <div class="background-image"></div>
             </div>
-
+            <!-- VER 1. -->
             <div class="content-container">
                 <div class="header-wrapper">
                     <h1>
@@ -570,12 +570,15 @@
                         </div>
                         <p>
                             Want to speed up the process of getting to know
-                            Centhris? <span>
-
-                                <RouterLink class="link" :to="{ name: 'BookADemo' }">
+                            Centhris?
+                            <span>
+                                <RouterLink
+                                    class="link"
+                                    :to="{ name: 'BookADemo' }"
+                                >
                                     Book a demo now!
-                            </RouterLink>
-                              </span>
+                                </RouterLink>
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -744,7 +747,6 @@ export default {
         };
 
         const addClassOnScroll = () => {
-
             const currentOnScreenSect = isOnScreen();
             if (currentOnScreenSect != previousOnScreenSect.value) {
                 previousOnScreenSect.value = currentOnScreenSect;
