@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
+        "dev": "LARAVEL_BYPASS_ENV_CHECK=1 vite",
         "build": "vite build"
     },
     "devDependencies": {
