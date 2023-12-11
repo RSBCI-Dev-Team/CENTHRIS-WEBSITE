@@ -1,0 +1,37 @@
+on:
+  push:
+    branches: master
+name: 🚀 Deploy centhris master frontend website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and NPM
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+      - name: Install dependencies
+        run: npm install
+      - name: Compile App.js
+        run: npm run dev
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.rsbcidevteam.tech
+          username: john.nubla@rsbcidevteam.tech
+          password: password123456password123456
+          server-dir: /centhris.rsbcidevteam.tech/js/
+          local-dir: ./public/js/
+      - name: 📂 Sync files 2
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.rsbcidevteam.tech
+          username: john.nubla@rsbcidevteam.tech
+          password: password123456password123456
+          server-dir: /centhris.rsbcidevteam.tech/
+          local-dir: ./public/
+          file: mix-manifest.json

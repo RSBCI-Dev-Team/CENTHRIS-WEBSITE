@@ -1,0 +1,39 @@
+on:
+  push:
+    branches: master
+name: 🚀 Deploy centhris master backend on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and NPM
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+
+      - name: Install dependencies
+        run: composer install
+      - name: Cache Route List (BACKEND)
+        run: php artisan route:cache
+      - name: Cache Config List (BACKEND)
+        run: php artisan config:cache
+      - name: Cache View List (BACKEND)
+        run: php artisan view:cache
+      - name: Composer Dump-autoload (BACKEND)
+        run: composer dump-autoload
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.rsbcidevteam.tech
+          username: john.nubla@rsbcidevteam.tech
+          password: password123456password123456
+          server-dir: /centhris_backend/
+          exclude: |
+            /public/
+            .env
+            .env.live
+            .envlocalhost
