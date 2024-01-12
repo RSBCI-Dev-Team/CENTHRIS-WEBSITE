@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from "vue-router";
 import Landing from "@/pages/Landing.vue";
 import BookADemo from "@/pages/BookADemo.vue";
 
-
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+
         {
             path: "/",
             name: "Landing",
@@ -14,7 +14,7 @@ const router = createRouter({
         {
             path: "/book-a-demo",
             name: "BookADemo",
-            component: () => import("../pages/BookADemo.vue"),
+            component: BookADemo,
         },
 
 

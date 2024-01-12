@@ -1,0 +1,112 @@
+.coming-soon {
+    width: 100%;
+    height: 100vh;
+    color: $neutral-color-0;
+
+    position: relative;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        align-items: end;
+
+        margin: 0 92px;
+
+        .jumbotron {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            height: 100%;
+            justify-content: center;
+            padding: 64px 0;
+
+            .header-logo {
+                img {
+                    width: 175px;
+                    height: 37px;
+                }
+            }
+
+            .header-detail {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                h1 {
+                    font-size: 4rem;
+                    font-weight: $weight-700;
+                    font-family: $ptSans-font;
+                    line-height: 58px;
+                }
+                p {
+                    font-size: 1.5rem;
+                    font-weight: $weight-300;
+                }
+
+                ul {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .copy-right {
+            padding: 64px 0;
+            font-size: 0.875rem;
+            font-weight: $weight-400;
+        }
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .coming-soon {
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            .jumbotron {
+                width: 100%;
+                align-items: center;
+
+                .header-detail {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .coming-soon {
+        .wrapper {
+            margin: 0 24px;
+
+            .jumbotron {
+                padding: 44px 0;
+                .header-logo {
+                    img {
+                        width: 141px;
+                        height: 30px;
+                    }
+                }
+
+                .header-detail {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .copy-right {
+                padding: 44px 0;
+                font-size: 0.675rem;
+            }
+        }
+    }
+}
